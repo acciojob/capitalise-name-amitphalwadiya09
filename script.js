@@ -1,8 +1,10 @@
-let inputva=document.querySelector("#fname")
+document.getElementById('fname').addEventListener('blur', function() {
+    // Get the value of the input field
+    let inputValue = this.value;
 
-inputva.addEventListener('blur',toupper)
+    // Convert the value to uppercase
+    let uppercaseValue = inputValue.toUpperCase();
 
-function toupper() {
-	let uppercase=inputva.value.toUpperCase();
-	inputva.value=uppercase;
-}
+    // Set the uppercase value back to the input field
+    this.value = uppercaseValue;
+});
