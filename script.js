@@ -1,6 +1,8 @@
-//your JS code here. If required.
-let result=document.querySelector("#fname")
+let inputva=document.querySelector("#fname")
 
-let ans=result.value;
+inputva.addEventListener('blur',toupper)
 
-result.value=ans.toUpperCase();
+function toupper() {
+	let uppercase=inputva.value.toUpperCase();
+	inputva.value=uppercase;
+}
